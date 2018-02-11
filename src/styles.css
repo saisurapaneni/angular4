@@ -1,1 +1,277 @@
 /* You can add global styles to this file, and also import other style files */
+
+@font-face {
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: normal;
+	src: url(assets/open-sans/OpenSans-Regular.ttf) format('truetype');
+}
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+body {
+	background: #FFF;
+	color: #333;
+	font-family: 'Open Sans'
+}
+
+h2 {
+  font-size: 250%;
+  font-weight: 700;
+  text-align: center;
+  padding-top: 2%;
+}
+h3{
+  font-size: 175%;
+  font-weight: 400;
+  text-align: center;
+  padding: 5% 0;
+  line-height: 155%
+}
+p {
+	font-size: 160%;
+	line-height: 150%;
+	padding: 3%;
+	text-indent: 2%;
+	text-align: justify;
+}
+img {
+	max-width: 100%;
+	height: auto;
+	width: auto;
+	margin-bottom: -4px;
+}
+header {
+	width: 100%;
+}
+#header-strip {
+	background-color: #0E408A;
+	height: 35px;
+	max-width: 100%;
+	margin: 0 auto;
+}
+#header-strip nav {
+	height: 35px;
+	float: right;
+}
+#header-strip nav ul li {
+	font-family: 'Open Sans';
+	color: #FFF;
+	font-size: 70%;
+	display: inline-block;
+	float: left;
+	padding: 10px 20px 0 25px;
+}
+#header-inner {
+	max-width: 100%;
+	margin: 0 auto;
+}
+#header-inner nav {
+	float: right;
+	padding: 25px 20px 0 0 ;
+}
+#header-inner nav ul li {
+	font-size: 12px;
+	display: inline-block;
+	float: left;
+	padding: 10px 25px 10px 25px;
+	color: #0E408A;
+	text-decoration: none;
+}
+.findPool {
+	border: 1px solid #3D7EDF;
+	border-radius: 2px;
+}
+#logo {
+	margin: 30px 30px 20px 45px;
+	float: left;
+	width: 150px;
+	height: 60px;
+}
+
+/* -- Navigation -- */
+#menu-icon {
+	display: hidden;
+	width: 40px;
+	height: 40px;
+	background: url(assets/images/menu-icon-mobile.png) center;
+}
+a:hover#menu-icon {
+	border-radius: 4px 4px 0 0;
+}
+ul {
+	list-style-type: none;
+}
+/* --End Navigation -- */
+
+.banner {
+	width: 100%;
+	background-color: #FFF;
+
+}
+.banner-inner {
+	max-width: 100%;
+	margin: 0 auto;
+
+}
+.inner-wrapper {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+.one-third {
+  width: 28%;
+  float: left;
+  text-align: center;
+  border: 1px solid #c3c3c3;
+  border-radius: 5px;
+  margin: 10px 10px 50px 10px;
+  box-shadow: 0px 0px 2px 2px #cecece;
+}
+.pool-header {
+  font-family: 'Open Sans';
+  margin: 10px;
+  border-bottom: 1px solid #c3c3c3;
+  color: #757575;
+  font-size:150%;
+  height:80px;
+}
+.pool-contact {
+  padding: 20px 0 0 20px;
+}
+.pool-contact .phone{
+  display:block;
+  color: #000;
+  font-weight:400;
+  font-size: 100%;
+  padding-bottom: 10px;
+
+}
+.pool-contact .phone-text{
+  display: block;
+  font-size: 70%;
+  font-style: italic;
+  color: #757575;
+  padding-bottom: 10px
+}
+.pool-email {
+  margin: 0 auto;
+  width: 50%;
+  padding: 5px;
+  border: 1px solid #A4E8E7;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 70%;
+  color: #0E408A;
+  background: url(assets/images/email-icon.png) no-repeat left;
+}
+.pool-hours {
+  margin-bottom: 25px;
+}
+.pool-hours p {
+  font-size: 70%;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.pool-hours .open-hours{
+  color: #757575;
+  font-weight: normal;
+  font-size: 70%;
+}
+.pool-footer{
+  clear: both;
+  text-align: center;
+  font-size: 70%;
+  color: #757575;
+  padding: 20px 10px 10px 10px;
+  background-color: #F6F6F6;
+}
+.pool-footer table, .pool-footer table tr {
+  width: 100%;
+}
+.pool-footer table td{
+  width: 50%;
+  padding-bottom: 2%;
+}
+/* -- start footer -- */
+footer.first {
+  background: #0E408A;
+  width: 100%;
+  clear: both;
+  height: 90px;
+}
+.footer-logo {
+  margin: 0 auto;
+  display: block;
+  padding: 2% 0 1% 0;
+  width: 120px;
+}
+.icon-twitter {
+  background: url(assets/images/twitter-icon.png) no-repeat center;
+}
+.icon-facebook {
+  background: url(assets/images/facebook-icon.png) no-repeat center;
+}
+.icon-youtube {
+  background: url(assets/images/youtube-icon.png) no-repeat center;
+}
+.social, .copyright {
+  list-style-type: none;
+  text-align: center;
+  font-size: 60%;
+  color: #fff;
+}
+.social li, .copyright li{
+  display: inline;
+}
+.social i{
+  margin: 0;
+  padding: 3% 0% 2% 4%;
+  color: #FFF;
+}
+.social i:hover{
+  color: #f5f5f5;
+}
+footer.second {
+  background-color: #2870DC;
+  max-height: 25px;
+  padding: 5px;
+}
+.copyright li {
+  margin-right:10px;
+}
+/* -- footer -- */
+
+/* -- start of media queries -- */
+@media screen and ( max-width: 768px){
+  h2 {
+    font-size: 150%;
+  }
+  h3 {
+    font-size: 125%;
+  }
+  p {
+    font-size: 120%;
+  }
+  header {
+    position: absolute;
+  }
+  #header-strip {
+    display: none;
+  }
+  #logo {
+    margin: 15px 0 20px -25px;
+
+  }
+  #menu-icon {
+    display: inline-block;
+    background: url(/assets/images/menu-icon-mobile.png) no-repeat center;
+  }
+  nav ul, nav:active ul {
+    display: none;
+  }
+
+}

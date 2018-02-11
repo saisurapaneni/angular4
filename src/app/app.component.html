@@ -1,20 +1,83 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<!-- start of header -->
+	<header>
+		<div id="header-strip">
+			<nav>
+				<ul>
+					<li>Dealers and Distributors {{this.dealers.zipcode}}</li>
+					<li class="">Commercial Service</li>
+				</ul>
+			</nav>
+		</div>
+		<div id="header-inner">
+			<a href="#" id="logo"><img src="../assets/images/pool-pros-logo.png"></a>
+			<nav>
+				<a href="#" id="menu-icon"></a>
+				<ul>
+					<li>Pools & Spas</li>
+					<li>Supplies</li>
+					<li>Resources</li>
+					<li>Services</li>
+				</ul>
+			</nav>
+			<nav class="findPool">Find a Pool Pro</nav>
+		</div>
 
+	</header>
+	<!-- end of header -->
+	<!-- start of banner -->
+	<section class="banner">
+		<div class="banner-inner">
+			<img src="../assets/images/water-image.png">
+		</div>
+	</section>
+	<!-- end of banner -->
+	<!-- start of filter -->
+	<section class="filter"></section>
+	<!-- end of filter -->
+	<!-- start of pools contact info -->
+	<section class="inner-wrapper">
+		<section class="one-third" *ngFor="let dealer of dealers.dealers">
+				<div class="pool-header">{{dealer.data.name}}</div>
+				<div class="pool-contact">
+					<span class="phone">{{dealer.data.phone1}}</span>
+					<span class="phone-text">Can't talk now? Click below to send an email</span>
+				</div>
+				<div class="pool-email">Contact this Pro</div>
+				<div class="pool-hours">
+						<p>Business Hours</p>
+						<p class="open-hours">Weekdays 7:00am - 7:00pm<br/>
+							Saturdays 7:00am - 3:00pm<br/>
+							Sundays - CLOSED</p>
+				</div>
+				<div class="pool-footer">
+					<table>
+						<tr *ngFor="let service of dealer.data.certifications"><td>{{service}}</td></tr>
+					</table>
+				</div>
+		</section>
+	</section>
+	<!-- end of pools contact info -->
+	<!-- start of footer -->
+	<footer class="first">
+		<img class="footer-logo" src="../assets/images/pool-pros-logo-footer.png">
+  <ul class="social">
+    <li>CONNECT WITH US</li>
+		<li><a href="#"><i class="icon-twitter"></i></a></li>
+    <li><a href="#"><i class="icon-facebook"></i></a></li>
+    <li><a href="#"><i class="icon-youtube"></i></a></li>
+  </ul>
+	</footer>
+	<!-- end of footer -->
+	<!-- start of footer -->
+	<footer class="second">
+		<ul class="copyright">
+			<li>&copy;2017 Pool Pros</li>
+      <li>|</li>
+			<li>Privacy Policy</li>
+      <li>|</li>
+			<li>Terms and Conditions</li>
+		</ul>
+	</footer>
+	<!-- end of second footer-->
+  <br/>
+<img src="../assets/psd/page 1.png">
