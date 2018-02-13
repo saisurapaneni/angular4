@@ -4,7 +4,7 @@
 			<nav>
 				<ul>
 					<li>Dealers and Distributors {{this.dealers.zipcode}}</li>
-					<li class="">Commercial Service</li>
+					<li class="commercial">Commercial Service</li>
 				</ul>
 			</nav>
 		</div>
@@ -12,16 +12,15 @@
 			<a href="#" id="logo"><img src="../assets/images/pool-pros-logo.png"></a>
 			<nav>
 				<a href="#" id="menu-icon"></a>
-				<ul>
+				<ul class="nav-tabs">
 					<li>Pools & Spas</li>
 					<li>Supplies</li>
 					<li>Resources</li>
 					<li>Services</li>
 				</ul>
+				<ul class="findPool"><li>Find a Pool Pro</li></ul>
 			</nav>
-			<nav class="findPool">Find a Pool Pro</nav>
 		</div>
-
 	</header>
 	<!-- end of header -->
 	<!-- start of banner -->
@@ -32,7 +31,16 @@
 	</section>
 	<!-- end of banner -->
 	<!-- start of filter -->
-	<section class="filter"></section>
+	<section class="filter">
+		<div class="filter-strip">Filter Results
+			<ul class="filter-options">
+				<li>Service</li>
+				<li>Installation</li>
+				<li>Residential</li>
+				<li class="filter-commercial">Commercial</li>
+			</ul>
+		</div>
+	</section>
 	<!-- end of filter -->
 	<!-- start of pools contact info -->
 	<section class="inner-wrapper">
