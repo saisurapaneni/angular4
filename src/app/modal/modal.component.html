@@ -1,3 +1,31 @@
-<p>
-  modal works!
-</p>
+<div class="modal-header">
+  <h3>EMAIL</h3>
+  <h1>{{data.name}}</h1>
+  <div class="close-modal">close</div>
+</div>
+<div class="modal-body">
+  <p>Fill out the form below and {{data.name}} will get in touch</p>
+  <div class="modal-form">
+    <form>
+      <label>First and last name</label>
+      <input type="text" class="first-name">
+      <label>Phone number</label>
+      <input type="text" class="phone-number">
+      <label>Email address</label>
+      <input type="text" class="email-address">
+      <label>Comments or questions</label>
+      <textarea class="comments"></textarea >
+      <label>Do you currently own a pool or spa?</label>
+      <input id="toggle-on" name="toggle" type="radio"><label class="radio-label selected" for="toggle-on">Yes</label>
+      <input id="toggle-off" name="toggle" type="radio"><label class="radio-label" for="toggle-off">No</label>
+
+      <label class="send-email">Send my email</label>
+    </form>
+</div>
+</div>
+<div class="modal-footer">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur cursus nunc in mi porta efficitur. Fusce ut magna felis.
+   Maecenas vel lacus molestie, auctor enim vel, consequat ligula. Cras ac pharetra ligula. Aliquam vitae massa dictum ipsum rhoncus feugiat.
+</div>
+
+<img src="../../assets/psd/Modal.png"/>
