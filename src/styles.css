@@ -370,7 +370,7 @@ h1 {
   font-size: 175%;
   font-weight: 400;
   text-align: left;
-  padding: 0 0 20px 12px;
+  padding: 0 0 20px 20px;
 }
 h2 {
   font-size: 150%;
@@ -390,6 +390,16 @@ h3{
   height: 100px;
   color:#FFF;
   font-size: 100%;
+}
+.modal-header .close-modal {
+  font-weight: bolder;
+    float: right;
+    margin-top: -87px;
+    margin-right: 15px;
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+    font-size: 100%;
 }
 .modal-body {
 	margin: 20px;
@@ -449,7 +459,7 @@ h3{
   display: inline-block;
 }
 .modal-form label.radio-label.selected {
-  background-color: blue;
+  background-color: #21C4C3;
 	color: #FFF
 }
 
@@ -457,6 +467,12 @@ input[type="radio"]:checked + label {
     background-color: darkblue;
     cursor: default;
     color: #E6E6E6;
+}
+.cdk-overlay-pane .mat-dialog-container{
+  padding: 0 ;
+}
+.error-msg{
+  background: url(assets/images/circle-form.png)
 }
 /* -- End of Modal -- */
 /* -- start of media queries -- */

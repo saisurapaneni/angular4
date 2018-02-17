@@ -1,11 +1,13 @@
-import { Component,OnInit } from '@angular/core';
+import { Component,OnInit, Inject } from '@angular/core';
 import { Http, Headers, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import { AppService } from './app.service';
-import {MatDialog} from '@angular/material';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatDialog, MatDialogConfig, MatDialogRef } from '@angular/material';
 import { ModalComponent } from './modal/modal.component';
+import { DOCUMENT } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
@@ -19,27 +21,49 @@ export class AppComponent implements OnInit {
   searchedDelears = [];
   services: any;
   selectedServices: any = [];
+  dialogRef: MatDialogRef<ModalComponent>;
 
-  constructor(private appService: AppService, public dialog: MatDialog){
+  config: MatDialogConfig = {
+  disableClose: false,
+  hasBackdrop: true,
+  backdropClass: '',
+  width: '70%',
+  height: '90%',
+  position: {
+    top: '',
+    bottom: '',
+    left: '',
+    right: ''
+  }
+};
+
+
+constructor(public dialog: MatDialog, @Inject(DOCUMENT) public doc: any, private appService: AppService) {
     this.services = [
       { name: 'Service Pro', selected: true },
       { name: 'Installation Pro', selected: true },
       { name: 'Residential Pro', selected: true },
       { name: 'Commercial Pro', selected: false }
     ]
+    this.dialog.afterOpen.subscribe(() => {
+          if (!doc.body.classList.contains('no-scroll')) {
+            doc.body.classList.add('no-scroll');
+          }
+        });
+
   }
 
   openDialog(poolName) {
-    let dialogRef = this.dialog.open(ModalComponent, {
-      height: '700px',
-      width: '650px',
-      data: {name: poolName},
-    });
 
-    dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
+
+    this.dialogRef = this.dialog.open(ModalComponent, this.config);
+    this.dialogRef.componentInstance.data = poolName;
+    this.dialogRef.afterClosed().subscribe((result: string) => {
+      this.dialogRef = null;
+      this.doc.body.classList.remove('no-scroll');
     });
   }
+
 
     ngOnInit(){
       this.appService.getJSON()

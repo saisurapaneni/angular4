@@ -1,10 +1,10 @@
 <div class="modal-header">
   <h3>EMAIL</h3>
-  <h1>{{data.name}}</h1>
-  <div class="close-modal">close</div>
+  <h1>{{data}}</h1>
+  <button class="close-modal" mat-raised-button (click)="dialogRef.close()">X</button>
 </div>
 <div class="modal-body">
-  <p>Fill out the form below and {{data.name}} will get in touch</p>
+  <p>Fill out the form below and {{data}} will get in touch</p>
   <div class="modal-form">
     <form>
       <label>First and last name</label>
@@ -19,7 +19,7 @@
       <input id="toggle-on" name="toggle" type="radio"><label class="radio-label selected" for="toggle-on">Yes</label>
       <input id="toggle-off" name="toggle" type="radio"><label class="radio-label" for="toggle-off">No</label>
 
-      <label class="send-email">Send my email</label>
+      <label class="send-email">Send my email<img src="../assets/images/next-arrow.png"/></label>
     </form>
 </div>
 </div>
@@ -27,5 +27,3 @@
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur cursus nunc in mi porta efficitur. Fusce ut magna felis.
    Maecenas vel lacus molestie, auctor enim vel, consequat ligula. Cras ac pharetra ligula. Aliquam vitae massa dictum ipsum rhoncus feugiat.
 </div>
-
-<img src="../../assets/psd/Modal.png"/>
