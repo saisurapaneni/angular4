@@ -66,7 +66,8 @@ header {
 }
 #header-inner nav {
 	float: right;
-	padding: 25px 20px 0 0 ;
+	padding: 25px 0px 0 0 ;
+  margin-right: 5%;
 }
 .nav-tabs {
   display: inline-block;
@@ -199,7 +200,7 @@ input {
   margin: 10px;
   border-bottom: 1px solid #c3c3c3;
   color: #757575;
-  font-size:150%;
+  font-size:120%;
   height:80px;
 }
 .pool-contact {
@@ -238,7 +239,7 @@ input {
   background: url(assets/images/email-icon.png) no-repeat;
   background-size: 7%;
   background-position: 10px 10px;
-  padding:8px 8px 8px 0px;
+  padding:7px 8px 8px 0px;
 }
 .pool-hours {
   margin-bottom: 25px;
@@ -367,13 +368,13 @@ footer.second {
 /* -- footer -- */
 /* -- Start of Modal -- */
 h1 {
-  font-size: 175%;
+  font-size: 150%;
   font-weight: 400;
   text-align: left;
   padding: 0 0 20px 20px;
 }
 h2 {
-  font-size: 150%;
+  font-size: 120%;
   font-weight: bold;
   text-align: left;
   padding-top: 2%;
@@ -408,6 +409,7 @@ h3{
 	font-size:80%;
 	color: #757575;
 	text-align: left;
+  margin-left:-14px;
 }
 .modal-form {
 	background-color: #F6F6F6;
@@ -419,26 +421,68 @@ h3{
 	font-weight: bold;
 }
 .modal-form input{
-	width: 100%;
+	width: 97%;
 	padding: 0;
 	margin: 10px 0 10px 0;
+  padding: 0 10px;
 	height: 40px;
 	border: 1px solid #ccc;
 }
-.modal-form input.phone-number{
+.name, .email {
+  width: 97%;
+  margin-top: -20px;
+}
+.comments span , .ownPool span{
+  color: #ccc;
+  float: right;
+  margin-top: -20px;
+  font-style: italic;
+  font-size: 80%;
+  margin-top: -20px;
+}
+.phone{
 	width: 50%;
+  margin-top:-20px;
+}
+.modal-form .phone input{
+  width: 94%
 }
 .modal-form textarea{
 	width: 100%;
 	height: 100px;
 	border: 1px solid #ccc;
 	margin:10px 0 10px 0;
+  padding: 0 10px;
 }
 .modal-form label.send-email{
 	text-align: center;
 	color: #000;
-	font-weight: bold;
+	font-weight: bolder;
 	font-size: 90%;
+  width: 113px;
+  margin:0 auto;
+  cursor: pointer;
+}
+.checked {
+  background: url(assets/images/checkmark-circle.png) no-repeat;
+  background-size: 60%;
+  background-position: 14px;
+  float: right;
+  width: 33px;
+  height: 20px;
+}
+.unchecked{
+  background: url(assets/images/circle-form.png) no-repeat;
+  background-size: 60%;
+  background-position: 14px;
+  float: right;
+  width: 33px;
+  height: 20px;
+}
+.form-elements{
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 30px;
 }
 .modal-footer {
 	background-color: #F6F6F6;
@@ -458,21 +502,28 @@ h3{
   margin:10px 0 10px 0;
   display: inline-block;
 }
-.modal-form label.radio-label.selected {
-  background-color: #21C4C3;
-	color: #FFF
+.modal-form label.radio-label {
+  background-color: #FFF;
+	color: #757575;
 }
 
 input[type="radio"]:checked + label {
-    background-color: darkblue;
+    background-color: #21C4C3;
     cursor: default;
-    color: #E6E6E6;
+    color: #FFF;
 }
 .cdk-overlay-pane .mat-dialog-container{
   padding: 0 ;
 }
 .error-msg{
   background: url(assets/images/circle-form.png)
+}
+.submit {
+  background: url(assets/images/next-arrow.png) no-repeat;
+  background-size:45%;
+  background-position: 10px;
+  float: right;
+  padding: 11px 20px 8px 8px;
 }
 /* -- End of Modal -- */
 /* -- start of media queries -- */

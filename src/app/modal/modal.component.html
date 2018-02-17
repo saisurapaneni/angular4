@@ -6,20 +6,39 @@
 <div class="modal-body">
   <p>Fill out the form below and {{data}} will get in touch</p>
   <div class="modal-form">
-    <form>
-      <label>First and last name</label>
-      <input type="text" class="first-name">
-      <label>Phone number</label>
-      <input type="text" class="phone-number">
-      <label>Email address</label>
-      <input type="text" class="email-address">
-      <label>Comments or questions</label>
-      <textarea class="comments"></textarea >
-      <label>Do you currently own a pool or spa?</label>
-      <input id="toggle-on" name="toggle" type="radio"><label class="radio-label selected" for="toggle-on">Yes</label>
-      <input id="toggle-off" name="toggle" type="radio"><label class="radio-label" for="toggle-off">No</label>
-
-      <label class="send-email">Send my email<img src="../assets/images/next-arrow.png"/></label>
+    <form #ngForm="ngForm" (submit)="poolFormSubmit(ngForm)" >
+      <div class="form-elements">
+        <label>First and last name</label>
+        <div class="name">
+          <span [ngClass]="{'checked':(ngForm.controls.name?.dirty || ngForm.controls.name?.touched),
+          'unchecked':(!ngForm.controls.name?.dirty || !ngForm.controls.name?.touched) }"></span>
+          <input type="text" class="first-name" name="name" ngControl="name" [(ngModel)]="name">
+        </div>
+        <label>Phone number</label>
+        <div class="phone">
+          <span [ngClass]="{'checked':(ngForm.controls.phone?.dirty || ngForm.controls.phone?.touched),
+          'unchecked':(!ngForm.controls.phone?.dirty || !ngForm.controls.phone?.touched) }"></span>
+          <input type="text" class="phone-number" name="phone" ngControl="phone" [(ngModel)]="phone">
+        </div>
+          <label>Email address</label>
+        <div class="email">
+          <span [ngClass]="{'checked':(ngForm.controls.email?.dirty || ngForm.controls.email?.touched),
+          'unchecked':(!ngForm.controls.email?.dirty || !ngForm.controls.email?.touched) }"></span>
+          <input type="text" class="email-address" name="email" ngControl="email" [(ngModel)]="email">
+      </div>
+        <label>Comments or questions</label>
+        <div class="comments">
+          <span>Optional</span>
+        <textarea class="comments"></textarea >
+        </div>
+        <label>Do you currently own a pool or spa?</label>
+        <div class="ownPool">
+          <span>Optional</span>
+        <input id="toggle-on" name="toggle" type="radio"><label class="radio-label" for="toggle-on">Yes</label>
+        <input id="toggle-off" name="toggle" type="radio"><label class="radio-label" for="toggle-off">No</label>
+      </div>
+    </div>
+      <label class="send-email" (click)="dialogRef.close()">Send my email<div class="submit"></div></label>
     </form>
 </div>
 </div>
