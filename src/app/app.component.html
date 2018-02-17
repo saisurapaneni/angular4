@@ -1,13 +1,13 @@
+<div id="dealer-info">
+	<nav>
+		<ul>
+			<li>Dealers and Distributors {{this.dealers.zipcode}}</li>
+			<li class="commercial">Commercial Service</li>
+		</ul>
+	</nav>
+</div>
 <!-- start of header -->
 	<header>
-		<div id="header-strip">
-			<nav>
-				<ul>
-					<li>Dealers and Distributors {{this.dealers.zipcode}}</li>
-					<li class="commercial">Commercial Service</li>
-				</ul>
-			</nav>
-		</div>
 		<div id="header-inner">
 			<a href="#" id="logo"><img src="../assets/images/pool-pros-logo.png"></a>
 			<nav>
@@ -35,10 +35,9 @@
 		<div class="filter-options">
 			  <label class="dealers-found">7 delears in 28266</label>
 			  <label class="filter-results">Filter Results</label>
-		    <label><input type="checkbox" />Service</label>
-				<label><input type="checkbox" />Installation</label>
-				<label><input type="checkbox" />Residential</label>
-				<label class="filter-commercial"><input type="checkbox" />Commercial </label>
+				<label *ngFor="let service of services" [ngClass]="{'filter-commercial': service.name == 'Commercial Pro'}" >
+					<input type="checkbox" [(ngModel)]="service.selected" (change)="checkIfAllSelected(service);">{{service.name}}
+				</label>
 		  </div>
 	</section>
 	<!-- end of filter -->
@@ -50,7 +49,9 @@
 					<span class="phone">{{dealer.data.phone1}}</span>
 					<span class="phone-text">Can't talk now? Click below to send an email</span>
 				</div>
-				<div class="pool-email">Contact this Pro</div>
+				<div class="email-wrapper" mat-button (click)="openDialog(dealer.data.name)">
+					<div class="pool-email">Contact this Pro</div>
+				</div>
 				<div class="pool-hours">
 						<p>Business Hours</p>
 						<p class="open-hours">Weekdays 7:00am - 7:00pm<br/>
@@ -58,9 +59,11 @@
 							Sundays - CLOSED</p>
 				</div>
 				<div class="pool-footer">
-					<table>
-						<tr *ngFor="let service of dealer.data.certifications"><td>{{service}}</td></tr>
-					</table>
+					<div class="pool-services">
+						<div *ngFor="let service of dealer.data.certifications"
+						[ngClass]="{'commercial': service == 'Commercial Pro', 'installation': service == 'Installation Pro',
+						'service': service == 'Service Pro','residential': service == 'Residential Pro'}">{{service}}</div>
+					</div>
 				</div>
 		</section>
 	</section>
@@ -76,14 +79,15 @@
   </ul>
 	</footer>
 	<!-- end of footer -->
-	<footer id="footer-strip">
-		<div>
-			<ul>
-				<li>Dealers and Distributors {{this.dealers.zipcode}}</li>
-				<li class="commercial">Commercial Service</li>
-			</ul>
+	<footer class="dealer-footer">
+		<div class="dealer-info-footer">
+				<ul>
+					<li>Dealers and Distributors</li>
+					<li>|</li>
+					<li class="commercial">Commercial Service</li>
+				</ul>
 		</div>
-	</footer>
+</footer>
 	<!-- start of footer -->
 	<footer class="second">
 		<ul class="copyright">
@@ -95,5 +99,3 @@
 		</ul>
 	</footer>
 	<!-- end of second footer-->
-  <br/>
-<img src="../assets/psd/page 1.png">
