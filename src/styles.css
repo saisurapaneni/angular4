@@ -14,21 +14,8 @@
 body {
 	background: #FFF;
 	color: #333;
-	font-family: 'Open Sans'
-}
-
-h2 {
-  font-size: 250%;
-  font-weight: 700;
-  text-align: center;
-  padding-top: 2%;
-}
-h3{
-  font-size: 175%;
-  font-weight: 400;
-  text-align: center;
-  padding: 5% 0;
-  line-height: 155%
+	font-family: 'Open Sans';
+	height: 100%;
 }
 p {
 	font-size: 160%;
@@ -45,22 +32,20 @@ img {
 }
 header {
 	width: 100%;
+	height: 100px;
 }
-#footer-strip {
-  display: hidden;
-}
-#header-strip {
+#dealer-info {
 	background-color: #0E408A;
 	height: 35px;
 	max-width: 100%;
 	margin: 0 auto;
 }
-#header-strip nav {
+#dealer-info nav {
 	height: 35px;
 	float: right;
   margin-right: 5%;
 }
-#header-strip nav ul li {
+#dealer-info nav ul li {
 	font-family: 'Open Sans';
 	color: #FFF;
 	font-size: 70%;
@@ -68,7 +53,7 @@ header {
 	float: left;
 	padding: 10px 20px 0 25px;
 }
-#header-strip nav ul li.commercial {
+#dealer-info nav ul li.commercial {
   background: url(assets/images/action-commercial-icon.png) no-repeat;
   background-size: 10%;
   background-position: center right;
@@ -93,6 +78,7 @@ header {
 	padding: 10px 25px 10px 25px;
 	text-decoration: none;
   color: #1F4E92;
+	font-weight: bold;
 }
 #header-inner .findPool {
 	border: 1px solid #3D7EDF;
@@ -112,7 +98,7 @@ header {
 	margin: 30px 30px 20px 45px;
 	float: left;
 	width: 150px;
-	height: 60px;
+	height: 21px;
 }
 
 /* -- Navigation -- */
@@ -133,12 +119,16 @@ ul {
 .banner {
 	width: 100%;
 	background-color: #FFF;
-
+	clear: both;
 }
 .banner-inner {
 	max-width: 100%;
 	margin: 0 auto;
-
+	border-top: 1px solid #ccc;
+	box-shadow:
+	inset 0px 11px 8px -10px #CCC;
+}
+.banner-inner img {
 }
 .filter{
   margin: 0 auto 20px auto;
@@ -147,7 +137,7 @@ ul {
   background-color: #F6F6F6;
   border-radius: 2px;
   position: relative;
-  top: -50px;
+  top: -65px;
 }
 label {
   padding-left: 15px;
@@ -161,7 +151,7 @@ input {
   margin: 0px 10px 0px 10px;
   vertical-align: bottom;
   position: relative;
-  top: -1px;
+  top: -2px;
   *overflow: hidden;
 }
 .filter-options {
@@ -169,15 +159,15 @@ input {
   padding-top: 1.5%;
 }
 .filter-options .dealers-found {
-  font-size: 80%;
-  font-weight: 500;
+  font-size: 100%;
+  font-weight: bold;
   color: #2870DC;
   border-right: 1px solid #C0C0C0;
   padding-right: 20px;
 }
 .filter-options .filter-results {
-  font-size: 80%;
-  font-weight: 500;
+  font-size: 100%;
+  font-weight: bold;
   color: #333;
 }
 .filter-commercial{
@@ -187,8 +177,13 @@ input {
   padding: 8px 20px 8px 8px;
 }
 .inner-wrapper {
-  margin: 0 auto;
-  max-width: 1200px;
+	margin: 0 auto;
+	clear: both;
+	max-width: 1200px;
+	top: -60px;
+	position: relative;
+	left: 5%;
+	right: 5%;
 }
 .one-third {
   width: 28%;
@@ -214,7 +209,7 @@ input {
 
   display: block;
   color: #000;
-  font-weight: 400;
+  font-weight: bolder;
   font-size: 100%;
   background: url(assets/images/phone-icon-desktop.png) no-repeat;
   background-size: 20px;
@@ -238,10 +233,11 @@ input {
   margin-bottom: 20px;
   text-align: center;
   font-size: 70%;
+	font-weight: bold;
   color: #0E408A;
-  background: url(assets/images/email-icon.png) no-repeat left;
+  background: url(assets/images/email-icon.png) no-repeat;
   background-size: 7%;
-  background-position: center left;
+  background-position: 10px 10px;
   padding:8px 8px 8px 0px;
 }
 .pool-hours {
@@ -259,20 +255,39 @@ input {
   font-weight: normal;
   font-size: 70%;
 }
-.pool-footer{
-  clear: both;
-  text-align: center;
+.pool-footer {
   font-size: 70%;
   color: #757575;
-  padding: 20px 10px 10px 10px;
+	height: 70px;
+  padding: 10px 10px 10px 10px;
   background-color: #F6F6F6;
 }
-.pool-footer table, .pool-footer table tr {
-  width: 100%;
+.pool-services {
+	width: 100%;
 }
-.pool-footer table td{
-  width: 50%;
-  padding-bottom: 2%;
+.pool-services div {
+  float: left;
+  margin-left: 15px;
+  margin-top: 15px;
+  width: 40%;
+}
+div.installation{
+	background: url(assets/images/star-installation-pro.png) no-repeat;
+	background-size: 10%;
+}
+div.service{
+	background: url(assets/images/gear-service-pro.png) no-repeat;
+	background-size: 9%;
+	text-align: left;
+	padding-left:25px;
+}
+div.residential{
+	background: url(assets/images/home-residential-pro.png) no-repeat;
+	background-size: 10%;
+}
+div.commercial{
+	background: url(assets/images/users-commercial-pro.png) no-repeat;
+	background-size: 10%;
 }
 /* -- start footer -- */
 footer.first {
@@ -299,16 +314,18 @@ footer.first {
   background: url(assets/images/youtube-icon.png) no-repeat center;
   background-size: 12px;
 }
-.social, .copyright {
+.social, .copyright, .dealer-info-footer ul {
   list-style-type: none;
   text-align: center;
   font-size: 50%;
   color: #fff;
 }
 .social li:first-child {
-  margin-right: 20px;
+	margin-right: 20px;
+	font-weight: bold;
+	font-size: 150%;
 }
-.social li, .copyright li{
+.social li, .copyright li,  .dealer-info-footer ul li{
   display: inline;
 }
 .social i{
@@ -327,8 +344,121 @@ footer.second {
 .copyright li {
   margin-right:10px;
 }
+.dealer-footer{
+	display: none;
+	width: 100%;
+	background-color: #2870DC;
+}
+.dealer-info-footer {
+	background-color: #2870DC;
+	max-height: 25px;
+	padding: 5px;
+	border-bottom: 1px solid #ccc;
+}
+.dealer-info-footer ul li {
+	  margin-right: 10px;
+}
+.dealer-info-footer ul li.commercial {
+  background: url(assets/images/action-commercial-icon.png) no-repeat;
+  background-size: 10%;
+  background-position: center right;
+  padding: 8px 20px 8px 8px;
+}
 /* -- footer -- */
+/* -- Start of Modal -- */
+h1 {
+  font-size: 175%;
+  font-weight: 400;
+  text-align: left;
+  padding: 0 0 20px 12px;
+}
+h2 {
+  font-size: 150%;
+  font-weight: bold;
+  text-align: left;
+  padding-top: 2%;
+}
+h3{
+	font-size: 90%;
+	font-weight: bold;
+	text-align: left;
+	padding: 20px 0 0px 20px;
+	line-height: 155%;
+}
+.modal-header{
+  background-color: #0E408A;
+  height: 100px;
+  color:#FFF;
+  font-size: 100%;
+}
+.modal-body {
+	margin: 20px;
+}
+.modal-body p {
+	font-size:80%;
+	color: #757575;
+	text-align: left;
+}
+.modal-form {
+	background-color: #F6F6F6;
+	padding: 20px;
+}
+.modal-form label{
+	display: block;
+	font-size: 80%;
+	font-weight: bold;
+}
+.modal-form input{
+	width: 100%;
+	padding: 0;
+	margin: 10px 0 10px 0;
+	height: 40px;
+	border: 1px solid #ccc;
+}
+.modal-form input.phone-number{
+	width: 50%;
+}
+.modal-form textarea{
+	width: 100%;
+	height: 100px;
+	border: 1px solid #ccc;
+	margin:10px 0 10px 0;
+}
+.modal-form label.send-email{
+	text-align: center;
+	color: #000;
+	font-weight: bold;
+	font-size: 90%;
+}
+.modal-footer {
+	background-color: #F6F6F6;
+	padding: 30px;
+	font-size:60%;
+}
 
+.modal-form input[type="radio"] {
+    display: none;
+}
+
+.modal-form label.radio-label {
+  padding: 5px 25px;
+  background-color: #FFF;
+  border: 1px solid #999;
+  border-radius: 2px;
+  margin:10px 0 10px 0;
+  display: inline-block;
+}
+.modal-form label.radio-label.selected {
+  background-color: blue;
+	color: #FFF
+}
+
+input[type="radio"]:checked + label {
+    background-color: darkblue;
+    cursor: default;
+    color: #E6E6E6;
+}
+/* -- End of Modal -- */
 /* -- start of media queries -- */
 @media screen and ( max-width: 768px){
   h2 {
@@ -343,39 +473,17 @@ footer.second {
   header {
     position: absolute;
   }
-  #header-strip {
-    display: hidden;
+  #dealer-info {
+  	display: none;
   }
-  #footer-strip {
+	.dealer-info-footer {
+		margin: 0 30% 0 30%;
+	}
+  .dealer-footer {
     display: block;
-  	background-color: #2870DC;
-  	height: 35px;
-  	max-width: 100%;
-  	margin: 0 auto;
-  }
-  #footer-strip div {
-  	height: 35px;
-  	float: right;
-    margin-right: 5%;
-  }
-  #footer-strip div ul li {
-  	font-family: 'Open Sans';
-  	color: #FFF;
-  	font-size: 50%;
-  	display: inline-block;
-  	float: left;
-  	padding: 10px 20px 0 25px;
-  }
-  #footer-strip div ul li.commercial {
-    background: url(assets/images/action-commercial-icon.png) no-repeat;
-    background-size: 10%;
-    background-position: center right;
-    float: left;
-    padding: 8px 20px 8px 8px;
   }
   #logo {
     margin: 15px 0 20px -25px;
-
   }
   #menu-icon {
     display: inline-block;
@@ -385,4 +493,9 @@ footer.second {
     display: none;
   }
 
+}
+@media screen and (min-width: 393px) and ( max-width: 622px){
+	.dealer-info-footer {
+		margin: 0 15% 0 15%;
+	}
 }
