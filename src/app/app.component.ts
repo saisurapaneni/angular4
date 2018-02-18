@@ -21,6 +21,7 @@ export class AppComponent implements OnInit {
   searchedDelears = [];
   services: any;
   selectedServices: any = [];
+  hideMobileMenu = true;
   dialogRef: MatDialogRef<ModalComponent>;
 
   config: MatDialogConfig = {
@@ -72,7 +73,12 @@ constructor(public dialog: MatDialog, @Inject(DOCUMENT) public doc: any, private
 
           //this.fitleredDealers(this.dealersList.dealers);
     }
-
+showMenu() {
+      this.hideMobileMenu = false;
+    }
+hideMenu() {
+  this.hideMobileMenu = true;
+}
   checkIfAllSelected(item) {
     this.selectedServices = [];
      if(item.selected == true){

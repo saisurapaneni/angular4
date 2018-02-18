@@ -9,9 +9,9 @@
 <!-- start of header -->
 	<header>
 		<div id="header-inner">
-			<a href="#" id="logo"><img src="../assets/images/pool-pros-logo.png"></a>
+			<a href="#" id="logo" > <img src="../assets/images/pool-pros-logo.png"></a>
 			<nav>
-				<a href="#" id="menu-icon"></a>
+				<a id="menu-icon" (click)="showMenu()"></a>
 				<ul class="nav-tabs">
 					<li>Pools & Spas</li>
 					<li>Supplies</li>
@@ -22,14 +22,14 @@
 			</nav>
 		</div>
 	</header>
-	<section class="mobile-menu">
-		<div class="close">X</div>
+	<section class="mobile-menu" *ngIf="!hideMobileMenu">
+		<div class="close" (click)="hideMenu()">X</div>
 		<div class="menu">MENU</div>
 		<ul class="mobile-menu-tabs">
-			<li>Pools & Spas</li>
-			<li>Supplies</li>
-			<li>Resources</li>
-			<li>Services</li>
+			<li (click)="hideMenu()">Pools & Spas</li>
+			<li (click)="hideMenu()">Supplies</li>
+			<li (click)="hideMenu()">Resources</li>
+			<li (click)="hideMenu()">Services</li>
 		</ul>
 	</section>
 	<!-- end of header -->
