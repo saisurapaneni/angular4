@@ -66,7 +66,7 @@ header {
 }
 #header-inner nav {
 	float: right;
-	padding: 25px 0px 0 0 ;
+	padding: 20px 0px 0 0 ;
   margin-right: 5%;
 }
 .nav-tabs {
@@ -115,6 +115,10 @@ a:hover#menu-icon {
 ul {
 	list-style-type: none;
 }
+
+.mobile-menu {
+  display: none;
+}
 /* --End Navigation -- */
 
 .banner {
@@ -133,12 +137,15 @@ ul {
 }
 .filter{
   margin: 0 auto 20px auto;
-  max-width: 80%;
+  max-width: 90%;
   height: 50px;
   background-color: #F6F6F6;
   border-radius: 2px;
   position: relative;
   top: -65px;
+}
+.mobile-filter{
+  display: none;
 }
 label {
   padding-left: 15px;
@@ -525,9 +532,48 @@ input[type="radio"]:checked + label {
   float: right;
   padding: 11px 20px 8px 8px;
 }
+.filter-services{
+  display: inline;
+}
 /* -- End of Modal -- */
 /* -- start of media queries -- */
-@media screen and ( max-width: 768px){
+@media screen and ( max-width: 1080px){
+/*take care of service*/
+}
+@media screen and (min-width: 790px) and ( max-width: 940px){
+/*take care of filter*/
+  .filter-options .dealers-found, .filter-options  .filter-results {
+    font-size:80%
+  }
+  label {
+    padding: 0;
+  }
+  .filter {
+    top: -40px;
+  }
+  .one-third {
+    width:40%;
+  }
+  .inner-wrapper {
+    top: -30px;
+  }
+  #header-inner nav ul li{
+    padding:10px;
+  }
+}
+@media screen and (min-width: 100px) and ( max-width: 789px){
+/*take care of navigation*/
+  #logo {
+    margin:30px 0px 20px 25px;
+  }
+  #header-inner nav ul li {
+    padding: 10px;
+  }
+  .one-third{
+    width:82%;
+    margin-bottom: -10px;
+  }
+
   h2 {
     font-size: 150%;
   }
@@ -540,6 +586,7 @@ input[type="radio"]:checked + label {
   header {
     position: absolute;
   }
+
   #dealer-info {
   	display: none;
   }
@@ -559,10 +606,105 @@ input[type="radio"]:checked + label {
   nav ul, nav:active ul {
     display: none;
   }
+  .social i{
+    padding:3%
+  }
+  .pool-header {
+    border-bottom: none;
+    height:10px;
+    margin:20px;
 
+  }
+/*
 }
-@media screen and (min-width: 393px) and ( max-width: 622px){
+@media screen and (min-width:100px)and ( max-width: 400px){*/
 	.dealer-info-footer {
 		margin: 0 15% 0 15%;
 	}
+  .one-third{
+    width:82%;
+    margin-bottom: -10px;
+    box-shadow: none;
+  }
+  /*header and filter */
+  header {
+    position: relative;
+  }
+  #header-inner nav {
+    padding: 8px 0 0 0;
+    margin-right:50px;
+  }
+  #header-inner nav .nav-tabs {
+  display:none;
+}
+#menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  background: url(/assets/images/menu-icon-mobile.png) no-repeat center;
+  background-size: 42px;
+  background-position: center right;
+  position: absolute;
+  right: 0;
+}
+.banner {
+  margin-top:-44px;
+}
+#logo {
+    margin: 15px 0 20px 5px;
+  }
+.inner-wrapper {
+  top: -10px;
+}
+.filter-options .dealers-found, .filter-options .filter-results{
+  font-size: 80%;
+}
+.filter{
+  display: block;
+  background-color:#F6F6F6;
+  padding:10px;
+  top:0;
+  height: auto;
+  margin:0;
+  max-width: 100%
+}
+.filter .filter-services {
+  margin:10px;
+  background-color:#FFF;
+}
+.filter-commercial {
+  padding: 0;
+  background-size:6%;
+  background-position: 140px;
+}
+.filter .filter-services label{
+  display: block;
+  text-align: left;
+  margin: 10px;
+  padding-left: 35px;
+}
+.social i{
+  padding:3%;
+}
+
+.pool-contact div.mobile-phone .phone{
+  background: url(assets/images/phone-icon-mobile.png) no-repeat;
+  background-size: 30px;
+  background-position: center left;
+  margin:10px auto;
+}
+.modal-form .phone input {
+  width:85%
+}
+.modal-form .phone{
+  width: 86%;
+}
+.mobile-menu {
+  display: block;
+}
+.mobile-menu .close{
+  color: #21C4C3;
+}
+.mobile-menu div.menu {
+
+}
 }

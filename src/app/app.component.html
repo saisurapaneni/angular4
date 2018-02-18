@@ -22,6 +22,16 @@
 			</nav>
 		</div>
 	</header>
+	<section class="mobile-menu">
+		<div class="close">X</div>
+		<div class="menu">MENU</div>
+		<ul class="mobile-menu-tabs">
+			<li>Pools & Spas</li>
+			<li>Supplies</li>
+			<li>Resources</li>
+			<li>Services</li>
+		</ul>
+	</section>
 	<!-- end of header -->
 	<!-- start of banner -->
 	<section class="banner">
@@ -35,9 +45,11 @@
 		<div class="filter-options">
 			  <label class="dealers-found">7 delears in 28266</label>
 			  <label class="filter-results">Filter Results</label>
+				<div class="filter-services">
 				<label *ngFor="let service of services" [ngClass]="{'filter-commercial': service.name == 'Commercial Pro'}" >
 					<input type="checkbox" [(ngModel)]="service.selected" (change)="checkIfAllSelected(service);">{{service.name}}
 				</label>
+			</div>
 		  </div>
 	</section>
 	<!-- end of filter -->
@@ -46,9 +58,12 @@
 		<section class="one-third" *ngFor="let dealer of dealers.dealers">
 				<div class="pool-header">{{dealer.data.name}}</div>
 				<div class="pool-contact">
-					<span class="phone">{{dealer.data.phone1}}</span>
+					<div class="mobile-phone">
+						<span class="phone">{{dealer.data.phone1}}</span>
+					</div>
 					<span class="phone-text">Can't talk now? Click below to send an email</span>
 				</div>
+
 				<div class="email-wrapper" mat-button (click)="openDialog(dealer.data.name)">
 					<div class="pool-email">Contact this Pro</div>
 				</div>
